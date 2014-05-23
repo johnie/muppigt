@@ -1,0 +1,210 @@
+/*------------------------------------* 
+   $MAIN 
+*------------------------------------*/
+/** 
+ * Overall elements 
+ */
+
+body
+  color #333
+
+.header
+  background $brand-color url('images/patternmi.png') top left repeat
+  font-family $base-font-family
+  position relative
+  min-height 500px
+
+.jumbo
+  display inline-block
+  width 100%
+  max-width 500px
+  position absolute
+  top 50%
+  left 50%
+  vendor('transform', translate(-50%, -50%))
+
+.logo
+  display block
+  background transparent url('images/logo.svg') top left no-repeat
+  -webkit-background-size 100%
+  background-size 100%
+  text-indent -9999px
+  max-width 300px
+  height 180px
+  margin 0 auto
+  margin-bottom 30px
+
+.title
+  color #fff
+  font-family $base-font-family
+  text-align center
+  font-size 4em
+  margin 0
+
+
+/** 
+ * Push area 
+ */
+.push
+  position absolute
+  bottom 0
+  left 0
+  height 20px
+  width 100%
+  background-color transparent
+  overflow hidden
+  clearfix()
+
+.push-half
+  width 50%
+  height 20px
+  float left
+  background-color transparent
+  position relative
+
+.push-inner
+  position absolute
+  background-color #fff
+  height 20px
+  width 100%
+
+.push-inner--left
+  top 0
+  right 20px
+
+  &:after
+    content ''
+    display block
+    width 0
+    left 0
+    border-width 10px
+    border-style solid
+    border-color transparent
+    position absolute
+    left 100%
+    top 0
+    border-left-color #fff
+    border-bottom-color #fff
+
+.push-inner--right
+  top 0
+  left 20px
+
+  &:after
+    content ''
+    display block
+    width 0
+    left 0
+    border-width 10px
+    border-style solid
+    border-color transparent
+    position absolute
+    left -20px
+    top 0
+    border-right-color #fff
+    border-bottom-color #fff
+
+
+.banner
+  padding 120px 0
+  border-bottom 2px solid #DADADA
+  margin-bottom 60px
+  text-align center
+
+.description
+  display inline-block
+  max-width 750px
+  position relative
+
+  p
+    font-family $base-font-family
+    font-size 1.4em
+    line-height 1.68
+    padding 0px 10px
+
+    @media (max-width: 575px)
+      font-size 1.1em
+
+  &:before
+    content ''
+    display block
+    background transparent url('images/obs.png') top left no-repeat
+    width 105px
+    height 61px
+    position absolute
+    left 50%
+    top -70px
+    vendor('transform', translateX(-50%))
+
+  &:after
+    content ''
+    display block
+    background transparent url('images/paint.png') center center no-repeat
+    width 100%
+    height 40px
+    position absolute
+    top 100%
+    left 0
+
+    @media (max-width: 575px)
+      -webkit-background-size 90%
+      background-size 90%
+
+
+.plate
+  display block
+  max-width 700px
+  padding 30px 40px
+  margin 0 auto
+  background-color #f0f0f0
+  margin-bottom 60px
+  clearfix()
+
+.plate-title
+  font-family $base-font-family
+  color $brand-color
+  font-size 24px
+  margin 0
+
+
+.main
+  border-bottom 2px solid #DADADA
+  margin-bottom 60px
+
+.article
+  max-width 700px
+  padding 0 10px
+  margin 0 auto
+
+.box
+  margin-bottom 60px
+
+
+
+.footer
+  padding-bottom 60px
+  text-align center
+
+.footer-title
+  margin 0
+
+.fi-link
+  color #CD1B68
+
+.btn
+  background-color $brand-color
+  color #fff
+  display inline-block
+  padding 0 2.5em
+  line-height 2.5
+  font-family $base-font-family
+  font-size 1.4em
+  margin 10px
+  border none
+  vendor('transition', background-color .2s ease)
+
+  &:hover
+    background-color $brand-color--darken
+
+.social
+  padding-top 20px

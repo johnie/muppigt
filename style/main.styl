@@ -14,6 +14,9 @@ body
   position relative
   min-height 500px
 
+  @media (max-width: 600px)
+    min-height 350px
+
 .jumbo
   display inline-block
   width 100%
@@ -34,6 +37,10 @@ body
   margin 0 auto
   margin-bottom 30px
 
+  @media (max-width: 600px)
+    width 200px
+    height 120px
+
 .title
   color #fff
   font-family $base-font-family
@@ -41,6 +48,8 @@ body
   font-size 4em
   margin 0
 
+  @media (max-width: 600px)
+    font-size 2em
 
 /** 
  * Push area 
@@ -160,6 +169,10 @@ body
   margin-bottom 60px
   clearfix()
 
+  @media (max-width: 600px)
+
+    padding 30px 20px
+
 .plate-title
   font-family $base-font-family
   color $brand-color
@@ -208,3 +221,68 @@ body
 
 .social
   padding-top 20px
+
+
+.disclaimer
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color $brand-color
+  color #fff
+  z-index 1000
+  opacity 0
+  visibility hidden
+  vendor('transition', opacity .2s ease-out, visibility .5s ease)
+  overflow auto
+
+  @media (max-width: 600px)
+    padding-top 50px
+
+  &.open-modal
+    opacity 1
+    visibility visible
+
+.overflow--hidden
+  overflow hidden !important
+
+.disclaimer-inner
+  font-family $base-font-family
+  display inline-block
+  width 100%
+  max-width 600px
+  position absolute
+  top 50%
+  left 50%
+  vendor('transform', translate(-50%, -50%))
+
+  @media (max-width: 600px)
+    position relative
+    top 0
+    left 0
+    vendor('transform', translate(-0%, -0%))
+
+    h2
+      font-family "klinic_slabmedium", $base-font-family
+      font-size 24px
+
+  p
+    font-size 1.3em
+
+    @media (max-width: 600px)
+      padding 0px 10px
+      font-size 15px
+      font-family sans-serif
+
+.close-modal
+  position absolute
+  top 15px
+  right 20px
+  color darken($brand-color, 25%)
+  z-index 1100
+  font-size 2em
+  vendor('transition', color .2s ease)
+  
+  &:hover
+    color #fff
